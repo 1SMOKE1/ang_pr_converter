@@ -1,0 +1,12 @@
+<header class="header bg-secondary">
+  <div class="header-title py-2">
+    <h1 class="text-center ">Курс валют на Сьогодні у відділеннях ПриватБанку</h1>
+    <img class="header-img" src="assets/header/logo.png" alt="">
+  </div>
+  <div class="valute-card-group py-3">
+    <div class="valute-card  p-3" *ngFor="let item of valute">
+      <p>Купівля: <span class="fw-bold text-buy">{{item.buy}}</span> {{item.base_ccy}} Продаж: <span class="fw-bold text-success">{{item.sale}}</span> {{item.base_ccy}}</p>
+      <p class="text-center">Валюта: {{item.ccy}}</p>
+    </div>
+  </div>
+</header>
