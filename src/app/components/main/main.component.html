@@ -2,15 +2,15 @@
   <div class="container my-3">
     <h1 class="text-center text-success">Конвертер валют</h1>
     <div class="valute-converter-card my-4">
-      <select (change)="convertFrom($event)" class="mx-1 rounded-2" name="select">
+      <select (change)="convertSelect($event)" class="mx-1 rounded-2" name="selectFrom">
         <option value="UAH" selected>UAH</option>
         <option value="EUR" >EUR</option>
         <option value="USD">USD</option>
       </select>
-      <label for=""><input class="valute-converter-card-input mx-1" (input)="getUserInp($event)" [value]="userInp" type="number" min="0" ></label>
+      <label for=""><input class="valute-converter-card-input mx-1" (input)="userInputConvert($event)" [value]="userInput.userInp" type="number" min="0" name="from"></label>
       <p class="valute-converter-card-text">Результат конвертації: </p> 
-      <label for=""><input class="valute-converter-card-input" (input)="getUserInpRes($event)" [value]="userRes" type="number" min="0" ></label>
-      <select (change)="convertTo($event)" class="mx-1 rounded-2" name="select"> 
+      <label for=""><input class="valute-converter-card-input" (input)="userInputConvert($event)" [value]="userInput.userRes" type="number" min="0" name="to" ></label>
+      <select (change)="convertSelect($event)" class="mx-1 rounded-2" name="selectTo"> 
         <option value="UAH" selected>UAH</option>
         <option value="EUR" >EUR</option>
         <option value="USD" >USD</option>

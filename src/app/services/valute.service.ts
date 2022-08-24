@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { valuteI } from '../interfaces/valuteI';
 import { Observable, map} from 'rxjs';
 
-export type curValuteObj = 'USD' | 'EUR';
+export type curValuteObj = 'USD' | 'EUR' | 'UAH';
 
 @Injectable({
   providedIn: 'root'
